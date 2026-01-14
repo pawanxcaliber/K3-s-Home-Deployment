@@ -87,11 +87,6 @@ curl -i http://10.84.106.126/api
 | **404 Not Found (/api)** | Traefik kept the `/api` prefix | Created a Middleware with `stripPrefix` to clean the URL. |
 | **CRD Version Error** | Used `traefik.containo.us` (old) | Used `kubectl api-resources` to find the correct `traefik.io/v1alpha1`. |
 
-## 🚀 Ready for Project 3?
-You now have a production-grade microservices skeleton. Next Step: Would you like to set up Persistent Storage (Longhorn) so that these files aren't lost if the pods restart?
-
----
-
 # Quick Reference Checklist
 
 ## 1. Installation & Cluster Setup
