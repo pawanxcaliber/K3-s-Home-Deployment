@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodejs
+  template:
+    metadata:
+      labels:
+        app: nodejs
+    spec:
+      tolerations:
+      - key: "hardware"
+        operator: "Equal"
+        value: "high-performance"
+        effect: "NoSchedule"
+      containers:
+      - name: nodejs
+        image: nginx:alpine
+        command: ["/bin/sh", "-c", "echo 'Hello from Node.js API' > /usr/share/nginx/html/index.html && nginx -g 'daemon off;'"]
