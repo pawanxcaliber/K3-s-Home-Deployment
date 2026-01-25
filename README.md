@@ -1,4 +1,4 @@
-# Project 2: Master Blueprint
+# Master Blueprint
 
 This document covers the complete lifecycle of your multi-node cluster, including the "battle-tested" fixes we implemented for the IP changes and Traefik routing.
 ## Note: All these IP's are Dynamically assigned by the Router, suggest to make it static IP's.
